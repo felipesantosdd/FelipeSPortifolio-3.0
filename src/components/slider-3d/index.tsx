@@ -30,7 +30,7 @@ export const Slider3D = function <T = unknown>({
               quantity={items.length}
               style={{
                 transform: `rotateY(${index * (360 / items.length)}deg) translateZ(600px)`,
-                margin: '0 20px' // Adjust the margin as needed
+                margin: '0 20px' // Ajuste a margem conforme necessário
               }}
             >
               {sliderItem(item)}
