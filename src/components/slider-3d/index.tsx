@@ -1,43 +1,28 @@
-import { SliderItem } from "./slider-item";
+import React from 'react';
+import { Slider3DItem } from './slider-item'
 
-interface Props<T> {
-  items: T[];
-  sliderItem: (props: T) => JSX.Element;
+interface Slider3DProps {
+  items: React.ReactNode[];
 }
 
-export const Slider3D = function <T = unknown>({
-  items,
-  sliderItem,
-}: Props<T>) {
+const Slider3D: React.FC<Slider3DProps> = ({ items }) => {
   return (
-    <div className="h-[50vh] overflow-visible scale-75 sm:scale-75 md:scale-100">
-      <div
-        aria-label="banner"
-        className="w-full h-full text-center overflow-hidden relative"
-      >
-        <div
-          aria-label="slider"
-          className="absolute w-[60%] h-[60%] top-[10%] left-[calc(50%-30%)] animate-AutoRun"
+    <div className="slider-3d">
+      {items.map((item, index) => (
+        <Slider3DItem
+          key={index}
+          index={index}
+          quantity={items.length}
           style={{
-            transformStyle: "preserve-3d",
-            transform: "perspective(400px)",
+            transform: `rotateY(${index * (360 / items.length)}deg) translateZ(600px)`,
+            margin: '0 20px' // Adjust the margin as needed
           }}
         >
-          {items.map((item, index) => (
-            <SliderItem
-              index={index}
-              key={index}
-              quantity={items.length}
-              style={{
-                transform: `rotateY(${index * (360 / items.length)}deg) translateZ(600px)`,
-                margin: '0 20px' // Adjust the margin as needed
-              }}
-            >
-              {sliderItem(item)}
-            </SliderItem>
-          ))}
-        </div>
-      </div>
+          {item}
+        </Slider3DItem>
+      ))}
     </div>
   );
 };
+
+export default Slider3D;
