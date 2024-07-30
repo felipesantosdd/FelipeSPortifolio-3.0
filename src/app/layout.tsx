@@ -6,7 +6,7 @@ import { TooltipSetup } from "@/lib/tooltip";
 import { ToastSetup } from "@/lib/toast";
 
 export const metadata: Metadata = {
-  title: "Portfólio | Felipe",
+  title: "Felipe S. Oliveira",
   description: "Portfólio de Felipe",
 };
 
