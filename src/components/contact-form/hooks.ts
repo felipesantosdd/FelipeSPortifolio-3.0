@@ -13,7 +13,7 @@ export const useContactForm = () => {
     console.log("Nome:", name);
     console.log("Mensagem:", message);
 
-    const whatsappMessage = `Olá, meu nome é ${name}.\nVi o seu portfólio e gostei muito.\n\n${message}`;
+    const whatsappMessage = `Olá, meu nome é ${name}.\n${message}`;
 
     const whatsappLink = `https://wa.me/5535999291958?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappLink, '_blank');
