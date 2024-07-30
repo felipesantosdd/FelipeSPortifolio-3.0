@@ -10,14 +10,15 @@ export const Slider3D = function <T = unknown>({
   sliderItem,
 }: Props<T>) {
   return (
-    <div className="h-[50vh] overflow-visible scale-75 sm:scale-75 md:scale-100">
+    <div className="h-[50vh] scale-100">
       <div
         aria-label="banner"
-        className="w-full h-full text-center overflow-hidden relative"
+        className="w-full h-full text-center overflow-hidden relative "
       >
         <div
+
           aria-label="slider"
-          className="absolute w-[60%] h-[60%] top-[10%] left-[calc(50%-30%)] animate-AutoRun"
+          className="absolute w-[60%] h-[60%] top-[10%] left-[calc(50%-30%)] animate-AutoRun "
           style={{
             transformStyle: "preserve-3d",
             transform: "perspective(400px)",
