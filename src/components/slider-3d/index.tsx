@@ -1,5 +1,6 @@
 import React from 'react';
-import { Slider3DItem } from './slider-item'
+import { Slider3DItem } from './slider-item';
+
 
 interface Slider3DProps {
   items: React.ReactNode[];
