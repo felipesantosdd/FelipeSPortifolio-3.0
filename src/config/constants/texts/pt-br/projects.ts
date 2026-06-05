@@ -9,9 +9,21 @@ import {
   img_windows,
 } from "@/assets/images/projects";
 
+const img_mhw_voice_modder = "https://raw.githubusercontent.com/felipesantosdd/mhw-voice-modder/master/screenshot.png";
+
 export const projects: ProjectsTexts = {
   title: "Projetos",
   projects: [
+    {
+      title: "MHW Voice Modder",
+      description:
+        "Interface gráfica para modding de voz de Monster Hunter World. Abre arquivos .nbnk/.bnk (Wwise SoundBank), mapeia ações via HIRC, extrai e substitui áudio com suporte a MP3, WAV, OGG e mais.",
+      tags: [tags["Python"], tags["Wwise"]],
+      image: img_mhw_voice_modder,
+      width: 1264,
+      height: 892,
+      github: "https://github.com/felipesantosdd/mhw-voice-modder",
+    },
     {
       title: "E-commerce de livros",
       description:

@@ -49,5 +49,12 @@ export const tags = {
     name: "Node.js",
     color: "#13aa52",
   },
-
+  Python: {
+    name: "Python",
+    color: "#F7C948",
+  },
+  Wwise: {
+    name: "Wwise",
+    color: "#c8a84b",
+  },
 };
